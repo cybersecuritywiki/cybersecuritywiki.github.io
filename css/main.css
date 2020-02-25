@@ -1,51 +1,102 @@
 body{
-    background-color: rgb(35, 35, 35);
-    overflow-x: hidden;
-    height: 150vh;
+    overflow: hidden;
 }
 
-#home{
-    position: relative;
-}
-
-h1{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-}
-
-h2{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-}
-
-p{
-    color: rgba(255, 255, 255, 0.692);
-}
-
+/* ----- Navigation Bar ----- */
 #navbar{
     z-index: 100;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background-color: rgb(1, 77, 107);
-}
-
-#navbar h1{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 17%; 
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 10px 0px 20px rgb(37, 37, 37);
     float: left;
-    padding: 15px;
 }
 
-#navbar ul{
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    list-style-type: none;
+#logo{
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: solid rgb(211, 211, 211) 2px;
 }
 
-#navbar li{
-    font-size: 20px;
+#logo img{
+    width: 100px;
+}
+
+#logo h1{
+    padding-top: 10px;
+    color:rgb(0, 144, 163);
+    font-size: 30px;
+    font-family: "Audiowide";
+}
+
+.navbox{
+    border-bottom: solid rgb(211, 211, 211) 2px;
+    font-size: 19px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
-    float: right;
-    padding-right: 30px;
+    padding: 15px 0px 15px 25%;
+    cursor: pointer;
+}
+
+.navbox:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.navsub{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 0px 10px 30%;
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+}
+
+.navsub:hover{
+    background-color: rgb(173, 173, 173);
+}
+
+#articles-box{
+    display: none;
+}
+
+a{
+    color: rgb(40, 40, 40);
+}
+
+a:hover{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+}
+
+/* ----- Content Box ----- */
+#contentbox{
+    position: relative;
+    height: 100vh;
+    width: 83%;
+    float: left;
+    background-color: rgb(59, 59, 59);
+}
+
+.articlebox{
+    margin-top: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.articlebox h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: white;
+}
+
+.articlebox p{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 50px;
 }
