@@ -103,6 +103,26 @@ body{
     transition: width .4s ease-in-out;
 }
 
+#sidebar ul{
+    padding-top: 40px;
+    padding-left: 0px;   
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    border-top: solid rgb(105, 105, 105) 1px;
+}
+
+#sidebar li{
+    color: rgb(226, 226, 226);
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+    border-bottom: solid rgb(45, 45, 45) 1px;
+}
+
 a{
     color: rgb(40, 40, 40);
 }
