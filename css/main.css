@@ -104,6 +104,7 @@ body{
 }
 
 #sidebar-links{
+    z-index: 99;
     padding-top: 40px;
     padding-left: 0px;
     text-decoration: none;
@@ -126,11 +127,14 @@ body{
     transition: opacity .3s ease-in-out;
 }
 
-#sidebar-links a{
+#sidebar-links a:hover{
+    text-decoration: none;
+    color: rgb(214, 214, 214);
 }
 
 #sidebar-icons{
     position: absolute;
+    z-index: 98;
     padding-top: 36px;
     padding-left: 0px;
     list-style: none;
