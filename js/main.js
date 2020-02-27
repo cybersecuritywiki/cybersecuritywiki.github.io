@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-    $(".articles").click(function(){
-        $("#articles-box").slideToggle();
+    $("#sidebar").hover(function(){
+        $(this).css("width","300px");
+    }, function(){
+        $(this).css("width","100px")
     })
 });

@@ -1,65 +1,70 @@
 body{
     overflow: hidden;
+    height: 100vh;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* ----- Navigation Bar ----- */
+.container{
+    overflow: hidden;
+    padding:0;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.315);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.315);
+    box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.315);
+}
+
+/* -------- Navigation Bars -------- */
 #navbar{
-    z-index: 100;
     position: relative;
-    top: 0;
-    left: 0;
-    width: 17%; 
-    height: 100vh;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 10px 0px 20px rgb(37, 37, 37);
+    z-index: 100;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.500);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.500);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.500);
+}
+
+#navbar h1{
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 20px;
+    color: rgb(29, 29, 29);
+    font-family: "Lobster";
+    font-size: 20px;
     float: left;
 }
 
-#logo{
+#navbar span{
+    font-family: "Righteous";
+    font-size: 40px;
+    color: rgb(0, 89, 141);
+}
+
+#navbar img{
     position: relative;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-bottom: solid rgb(211, 211, 211) 2px;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-right: 20px;
+    float: right;
+    border-radius: 50%;
+    width: auto;
+    height: 70%;
 }
 
-#logo img{
-    width: 100px;
-}
-
-#logo h1{
-    padding-top: 10px;
-    color:rgb(0, 144, 163);
-    font-size: 30px;
-    font-family: "Audiowide";
-}
-
-.navbox{
-    border-bottom: solid rgb(211, 211, 211) 2px;
-    font-size: 19px;
-    font-weight: 500;
-    padding: 15px 0px 15px 25%;
-    cursor: pointer;
-}
-
-.navbox:hover{
-    background-color: rgb(226, 226, 226);
-}
-
-.navsub{
-    font-size: 17px;
-    font-weight: 400;
-    padding: 10px 0px 10px 30%;
-    background-color: rgb(224, 224, 224);
-    cursor: pointer;
-}
-
-.navsub:hover{
-    background-color: rgb(173, 173, 173);
-}
-
-#articles-box{
-    display: none;
+#sidebar{
+    position: absolute;
+    z-index: 99;
+    float: left;
+    width: 100px; 
+    height: 93.5vh;
+    background-color: rgba(0, 0, 0, 0.800);
+    -webkit-box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.26);
+    transition: width .4s ease-in-out;
 }
 
 a{
@@ -71,32 +76,67 @@ a:hover{
     text-decoration: none;
 }
 
-/* ----- Content Box ----- */
+
+
+
+/* -------- Content Box -------- */
 #contentbox{
     position: relative;
-    height: 100vh;
-    width: 83%;
-    float: left;
-    background-color: rgb(59, 59, 59);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 93.5vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
 
-.articlebox{
-    margin-top: 100px;
-    margin-left: 15%;
-    margin-right: 15%;
+#contentbox img{
+    width: 100%;
+    opacity: 1;
 }
 
-.articlebox h1{
+#contentbox h1{
+    padding-left: 100px;
     text-align: center;
-    margin-bottom: 50px;
-    font-family: "Montserrat";
-    font-weight: 600;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
-.articlebox p{
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 50px;
+#contentbox p{
+    text-align: left;
+    padding-left: 23%;
+    padding-right: 14%;
+    color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: rgb(39, 39, 39); 
+    border-radius: 10px;
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(59, 59, 59); 
+}
+
+
+
+/* ------- Media Queries -------- */
+@media (min-width: 1500px){
+    .container {
+          max-width: 1500px;
+    }
+}
+
+@media (max-width: 1499px){
+    .container {
+          min-width: 100%;
+    }
 }
