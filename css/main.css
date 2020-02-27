@@ -52,6 +52,42 @@ body{
     border-radius: 50%;
     width: auto;
     height: 70%;
+    cursor: pointer;
+}
+
+#user-settings{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 98;
+    height: 110px;
+    width: 120px;
+    -webkit-box-shadow: inset inset 0px 2px 5px 0px rgba(0, 0, 0, 0.500);
+    -moz-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.500);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.500);
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+#user-settings ul{
+    padding-top: 1px;
+    padding-left: 0px;   
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+#user-settings li{
+    font-weight: 500;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: solid rgb(216, 216, 216) 1px;
+    cursor: pointer;
+}
+
+#user-settings li:hover{
+    background-color: rgb(226, 226, 226);
 }
 
 #sidebar{
