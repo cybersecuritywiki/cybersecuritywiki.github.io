@@ -95,7 +95,7 @@ body{
     z-index: 99;
     float: left;
     width: 100px; 
-    height: 93.5vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.800);
     -webkit-box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.26);
@@ -103,36 +103,51 @@ body{
     transition: width .4s ease-in-out;
 }
 
-#sidebar ul{
+#sidebar-links{
     padding-top: 40px;
-    padding-left: 0px;   
+    padding-left: 0px;
     text-decoration: none;
     list-style: none;
-    text-align: center;
+    text-align: left;
     width: 100%;
     border-top: solid rgb(105, 105, 105) 1px;
 }
 
-#sidebar li{
+#sidebar-links li{
     color: rgb(226, 226, 226);
     font-weight: 400;
     font-size: 20px;
     padding-top: 25px;
     padding-bottom: 25px;
+    padding-left: 70px;
     cursor: pointer;
     border-bottom: solid rgb(45, 45, 45) 1px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 
-a{
-    color: rgb(40, 40, 40);
+#sidebar-links a{
 }
 
-a:hover{
-    color: rgb(139, 139, 139);
-    text-decoration: none;
+#sidebar-icons{
+    position: absolute;
+    padding-top: 36px;
+    padding-left: 0px;
+    list-style: none;
+    top: 0;
+    right: 0;
+    text-align: right;
+    transition: opacity .3s ease-in-out;
 }
 
-
+#sidebar-icons li{
+    color: rgb(226, 226, 226);
+    top: 0;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 
 /* -------- Content Box -------- */
@@ -140,7 +155,7 @@ a:hover{
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 93.5vh;
+    height: 100vh;
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
