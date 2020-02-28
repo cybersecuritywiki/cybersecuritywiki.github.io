@@ -5,17 +5,11 @@ $( document ).ready(function() {
     $("#sidebar").hover(function(){
         $(this).css("width","250px");
         $("#sidebar-links li").css("opacity","1");
-        $("#sidebar-icons").css("opacity","0");
-        setTimeout(function(){
-            $("#sidebar-icons").css("display","none");
-          }, 400);
+        $("#sidebar-icons").stop().fadeOut();
     }, function(){
-        $("#sidebar-icons").css("display","block");
         $(this).css("width","100px");
         $("#sidebar-links li").css("opacity","0");
-        setTimeout(function(){
-            $("#sidebar-icons").css("opacity","1")
-          }, 100);
+        $("#sidebar-icons").stop().fadeIn();
     })
 
     $("#sidebar-links li").hover(function(){
